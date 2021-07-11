@@ -19,7 +19,10 @@ usersRoutes.post("/", async(req,res,next) =>{
 
 usersRoutes.get("/", async(req,res,next) =>{
     try{  
-
+            // const newDocument = new UserModel(newUser)
+            // await newDocument.save()
+            const users = await userModel.find({})
+            res.send(users)
     }
     catch(error){
         console.log(err)

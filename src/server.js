@@ -4,10 +4,11 @@ import listEndpoints from "express-list-endpoints"
 import mongoose from "mongoose"
 const port = process.env.PORT || 4000
 const server = express()
-import usersRoutes from "rou"
+import usersRoutes from "./../services/router.js"
 /*MIDDLE WARES*/
 server.use(cors())
 server.use(express.json())
+server.use(usersRoutes)
 
 /*ROUTES*/
 
